@@ -11,8 +11,8 @@ public class MovieTheatre {
     private static String[][] seats;
 
     public static void main(String[] args) {
-        int rows = 10;
-        int columns = 10;
+        int rows = 5;
+        int columns = 5;
 
         seats = new String[rows][columns];
 
@@ -57,12 +57,15 @@ public class MovieTheatre {
 
     // To view the seating chart:
     public static void viewSeats() {
+        System.out.println("\nCurrent Seating Chart:");
+        System.out.println("------------------------------------");
         for (int i = 0; i < seats.length; i++) {
             for (int c = 0; c < seats[i].length; c++) {
-                System.out.println((seats[i][c] == null ? "Available" : "Reserved") + "\t");
+                System.out.println((seats[i][c] == null ? "Available" : "Reserved") + " ");
             }
             System.out.println();
         }
+        System.out.println("------------------------------------");
     }
 
     // Suggesting an available seat: 
