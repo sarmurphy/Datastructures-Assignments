@@ -11,6 +11,11 @@ public class Test {
         System.out.println("Complete list before deletion:");
         list.traverseLinkedList();
 
+        // Deleting from invalid position: 
+        System.err.println("Invalid Node (-1):");
+        list.delete(-1);
+        list.traverseLinkedList();
+
         // Deleting the first node:
         System.out.println("First Node:");
         list.delete(0);

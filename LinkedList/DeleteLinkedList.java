@@ -86,10 +86,16 @@ public class DeleteLinkedList {
         if (head == null) {
             System.out.println("Item cannot be deleted because list is empty.");
             return;
-        } else if (location == 0) { //Deleting the first node.
+        } 
+        if (location < 0 || location >= size) {
+            System.out.println("Invalid position. Unable to delete.");
+            return;
+        }
+        
+        else if (location == 0) { //Deleting the first node.
             head = head.next;
             size--;
-            if (size ==0) { //Resetting the tail if the list becomes empty.
+            if (size == 0) { //Resetting the tail if the list becomes empty.
                 tail = null;
             }
         } else if (location >= size -1) { //Deleting the last node.
